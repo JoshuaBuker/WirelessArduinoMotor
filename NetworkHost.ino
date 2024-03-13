@@ -51,13 +51,13 @@ void webSocketEvent(uint8_t num, WStype_t type, uint8_t * payload, size_t length
         digitalWrite(in4, HIGH);
 
         analogWrite(enB, (int)(abs(y) * 255));
-        Serial.printf("Forward: %d\n", (int)(abs(y) * 255));
+        Serial.println((int)(abs(y) * 255));
       } else {
         digitalWrite(in3, HIGH);
         digitalWrite(in4, LOW);
 
-        analogWrite(enB, map((int)abs(y),0,1,0,255));
-        Serial.printf("Backwards: %d\n", (int)(abs(y) * 255));
+        analogWrite(enB, (int)(abs(y) * 255));
+        Serial.println((int)(abs(y) * 255));
       }
       
       break;
